@@ -1,17 +1,17 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
 
-const Frase = () => {
+const Frase = (props) => {
   return (
     <Card className='w-100'>
       <Card.Body>
         <div className="row">
           <div className="col-sm-12 col-md-4">
-            <img src="" alt="" />
+            <img src={props.personaje.image} alt={props.personaje.character} />
           </div>
           <div className="col-sm-12 col-md-8">
-            <Card.Title>Personaje</Card.Title>
-            <Card.Text>Frase aleatoria del personaje</Card.Text>
+            <Card.Title>{props.personaje.character}</Card.Title>
+            <Card.Text>{props.personaje.quote}</Card.Text>
           </div>
         </div>
       </Card.Body>
